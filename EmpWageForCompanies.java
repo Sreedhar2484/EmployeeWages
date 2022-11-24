@@ -7,7 +7,7 @@ public class EmpWageForCompanies{
     private final int EMP_RATE_PER_HOUR;
     private final int NUM_OF_WORKING_DAYS;
     private final int MAX_HRS_IN_MONTH;
-    public static int empHrs =0, totalEmpHrs=0, totalWorkingDays=0;
+    public  int empHrs =0, totalEmpHrs=0, totalWorkingDays=0;
 
     public EmpWageForCompanies(String company, int EMP_RATE_PER_HOUR, int NUM_OF_WORKING_DAYS, int MAX_HRS_IN_MONTH){
         this.company = company;
@@ -20,8 +20,8 @@ public class EmpWageForCompanies{
             
             //computation
             System.out.println("........<< Employee Wage for Current Company >>........");
-            while (totalEmpHrs<this.MAX_HRS_IN_MONTH && totalWorkingDays<this.NUM_OF_WORKING_DAYS){
-                totalWorkingDays++;
+            while (this.totalEmpHrs<this.MAX_HRS_IN_MONTH && totalWorkingDays<this.NUM_OF_WORKING_DAYS){
+                this.totalWorkingDays++;
                 int empCheck = (int)Math.floor(Math.random()*10)%3;
                 switch (empCheck){
                     case IS_PART_TIME:
@@ -33,8 +33,8 @@ public class EmpWageForCompanies{
                     default:
                         empHrs=0;
                 }
-                totalEmpHrs+=empHrs;
-                System.out.println("Day#" + totalWorkingDays + " Emp Hr :" +empHrs);
+                this.totalEmpHrs+=empHrs;
+                System.out.println("Day#" + this.totalWorkingDays + " Emp Hr :" +empHrs);
             
             }
             int totalEmpWage=totalEmpHrs*this.EMP_RATE_PER_HOUR;
