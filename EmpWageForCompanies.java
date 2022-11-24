@@ -19,7 +19,7 @@ public class EmpWageForCompanies{
             //variables
             
             //computation
-            System.out.println("........<< Employee Wage for Current Company >>........");
+            System.out.println("........<< Employee Wage for "+this.company+ ">>........");
             while (this.totalEmpHrs<this.MAX_HRS_IN_MONTH && totalWorkingDays<this.NUM_OF_WORKING_DAYS){
                 this.totalWorkingDays++;
                 int empCheck = (int)Math.floor(Math.random()*10)%3;
@@ -38,7 +38,7 @@ public class EmpWageForCompanies{
             
             }
             int totalEmpWage=totalEmpHrs*this.EMP_RATE_PER_HOUR;
-        System.out.println("Total Emp Wage  For Current Company :" + totalEmpWage);
+        System.out.println("Total Emp Wage  For "+this.company+" :" + totalEmpWage);
         
 
         }
